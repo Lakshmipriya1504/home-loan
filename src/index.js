@@ -5,9 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Dropdown } from '@material-ui/core';
+import { login } from "./loginpage/Login";
+import { landofficer } from "./landofficer-reg/Landofficer"
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <App /> 
+    <loginpage/>
+    <landofficer/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
