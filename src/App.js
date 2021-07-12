@@ -21,10 +21,7 @@ function App() {
               <div className="form-group">
               <label>Select Role</label>
               <input type="select role" className="form-control" placeholder="select role" />
-              <div class="dropdown">
-  <button class="dropdown-toggle" data-toggle="dropdown">Dropdown Example
-  <span class="caret"></span></button>
-  </div>
+              
               
               </div>
               <input type="button" className="bg-dark text-light p-3" value="Login" />
