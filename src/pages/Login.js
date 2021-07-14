@@ -2,19 +2,19 @@ import React from 'react';
 
 export function Login() {
     return (
-        <div>
-          
-     <div className="row">
+      <div>
+       <div className="row bg-secondary d-flex align-items-center"
+       style={{height: "100vh"}}>
        <div className="col-md-4 col-sm-4 col-xs-12"> </div>
-       <div className="col=md-4 col-sm-4 col-xs-12">
-         <form>
-            <h1 className="bg-dark text-light p-3">Login Form </h1>
+         <div className="col=md-4 col-sm-4 col-xs-12">
+          <form>
+             <h1 className="bg-dark text-light p-3">Login Form </h1>
             
-            <div className="form-group">
+             <div className="form-group">
               <label>Email Address</label>
               <input type="email" className="form-control"placeholder="Enter Email" />
-            </div>
-            <div className="form-group">
+             </div>
+             <div className="form-group">
               <label>Password</label>
               <input type="password" className="form-control" placeholder="Enter Password" />
               </div>
@@ -30,6 +30,7 @@ export function Login() {
               </div>
               <input type="button" className="bg-dark text-light p-3" value="Login" />
          </form>
+         
         </div>
       </div>
    </div> 

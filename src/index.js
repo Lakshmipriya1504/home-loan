@@ -5,8 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Dropdown } from '@material-ui/core';
+
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <App />
   </React.StrictMode>,
   document.getElementById('root')
