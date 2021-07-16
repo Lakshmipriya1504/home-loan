@@ -1,20 +1,15 @@
-import { useState } from "react";
-
+import { Navigations } from "./Navigations";
+import { Footers } from "./Footers";
 export function DocsVerificationPage() {
-  const [list] = useState([1, 1]);
+  
 
   return (
     <div>
-      <h2 className="bg-dark text-light p-3 sticky-top">Docs Details</h2>
+       <Navigations/>
+      <h2 className="bg-muted text-dark p-3 sticky-top">Document Details</h2>
+      
 
-      {list.map((item, index) => (
-        <div key={index} className="bg-success text-light p-4 m-3 rounded">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          necessitatibus temporibus quis fugit ad numquam cupiditate
-          perspiciatis natus magnam nemo ipsam ipsum facere eius, ipsa adipisci
-          aperiam reprehenderit vero impedit. wowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        </div>
-      ))}
+     <Footers/>
     </div>
   );
 }

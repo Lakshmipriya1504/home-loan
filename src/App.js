@@ -1,47 +1,47 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 import { Login } from "./pages/Login";
-import { BrowserRouter as Router, Route ,Link} from "react-router-dom";
+import { BrowserRouter as Router, Route ,Link,Switch} from "react-router-dom";
 import { LandOfficerReg } from './pages/LandOfficerReg';
 import { FinanceOfficerReg } from './pages/FinanceOfficerReg';
 import { UserRegistration } from './pages/UserRegistration';
+import { Nav } from 'react-bootstrap';
 
+//import { Navigation, Footer, Home, About, Register, Login1, Contact } from "./homepage";
+import { MyAppHomePage} from "./landverificationofficer/MyAppHomePage ";
+import { DocsVerificationPage} from "./landverificationofficer/DocsVerificationPage";
+import { StatusPage} from "./landverificationofficer/StatusPage";
+import { ViewCustomerPage} from "./landverificationofficer/ViewCustomerPage";
+import { Navigations } from './landverificationofficer/Navigations';
+import { Footers } from "./landverificationofficer/Footers";
 
-import { MyAppHomePage } from "./landverificationofficer/MyAppHomePage ";
-import { ViewCustomerPage } from "./landverificationofficer/ViewCustomerPage";
-import { DocsVerificationPage } from "./landverificationofficer/DocsVerificationPage";
-import {StatusPage } from "./landverificationofficer/StatusPage";
-
-
-
+import { admin } from "./admin/admin";
+import { ViewAllCustomer} from "./admin/view-all-customer";
+import { ViewCustomerById} from "./admin/view-customer-by-id";
+import { DeleteById} from "./admin/delete-customer-by-id"
+import { AppNav } from "./admin/AppNav";
+import { Footer } from "./admin/Footer";
 
 function App() {
   return (
+  //<div className="App">
+
+  
     <Router>
- <div className="bg-dark text-light p-4 mb-2 d-flex justify-content-between">
-        <Link to="/home">
-          <h3 className="text-light">Home</h3>
-        </Link>
-        <Link to="/explore">
-          <h3 className="text-light">View Customer</h3>
-        </Link>
-        <Link to="/notification">
-          <h3 className="text-light">Docs. Verification</h3>
-        </Link>
-        <Link to="/message">
-          <h3 className="text-light">Status</h3>
-        </Link>
 
+      {/* swetha */}
+  {/* <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/register" component= {Register} />
+          <Route exact path="/login1" component= {Login1 } />
+          <Route exact path="/contact" component= {Contact } />
+        </Switch>
+        <Footer /> */}
 
-        <Link to="/changestatus">
-          <h3 className="text-light">ChangeStatus</h3>
-        </Link>
-       
-      </div>
-
-
-
+      {/* lakshmi */}
       {/* <Route exact path="/" component={UserReg} /> */}
       <Route exact path="/Login" component={Login} />
       <Route exact path="/User-Registration" component={UserRegistration} />
@@ -49,16 +49,23 @@ function App() {
       <Route exact path="/LandOfficer-reg" component={LandOfficerReg} />
       <Route exact path="/FinanceOfficer-reg" component={FinanceOfficerReg} />
       
-
-      {/* <Route exact path="/" component={MyAppHomePage} /> */}
+      {/* muskan */}
+      <Route exact path="/" component={MyAppHomePage} />
       <Route exact path="/home" component={MyAppHomePage} />
-      <Route exact path="/explore" component={ViewCustomerPage} />
-      <Route exact path="/notification" component={DocsVerificationPage} />
-      <Route exact path="/message" component={StatusPage} />
+      <Route exact path="/viewcustomer" component={ViewCustomerPage} />
+      <Route exact path="/docsverification" component={DocsVerificationPage} />
+      <Route exact path="/status" component={StatusPage} />
 
-
+       {/* rohit */}
+      <Router>
+      <Route exact path="/admin" component={admin} />
+      <Route exact path="/viewAll" component={ViewAllCustomer} />
+      <Route exact path="/viewbyId" component={ViewCustomerById} />
+      <Route exact path="/delete" component={DeleteById} />
+    </Router>
      
     </Router>
+    // </div>
   );
   };
 export default App;
