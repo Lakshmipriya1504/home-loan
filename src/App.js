@@ -29,6 +29,16 @@ import { Footer } from "./admin/Footer";
  import {Status } from "./financeverificationofficer/Status";
  import { ViewCustomer } from "./financeverificationofficer/ViewCustomer"
 import { AppNavs } from './financeverificationofficer/AppNavs';
+
+
+
+import { CustomerList } from "./customer/CustomerList";
+import { CustomerUpsert } from "./customer/CustomerUpsert";
+import { AdminRegister } from "./customer/AdminRegister";
+import { ApplyLoan } from "./customer/ApplyLoan";
+import { Navs } from "./customer/Navs"
+
+
 function App() {
   return (
   //<div className="App">
@@ -56,8 +66,8 @@ function App() {
       <Route exact path="/FinanceOfficer-reg" component={FinanceOfficerReg} />
       
       {/* muskan */}
-      <Route exact path="/" component={Navigations} />
-      <Route exact path="/home" component={Navigations} />
+      {/* <Route exact path="/" component={Navigations} /> */}
+      <Route exact path="/landhome" component={Navigations} />
       <Route exact path="/viewcustomerpage" component={ViewCustomerPage} />
       <Route exact path="/docsverification" component={DocsVerificationPage} />
       <Route exact path="/statuspage" component={StatusPage} />
@@ -76,6 +86,15 @@ function App() {
       <Route exact path="/viewcustomer" component={ViewCustomer} />
       <Route exact path="/approval" component={Approval} />
       <Route exact path="/status" component={Status} />
+
+
+
+       {/* deepak */}
+      <Route exact path="/" component={ Navs} />
+      <Route exact path="/customer-upsert" component={CustomerUpsert} />
+      <Route exact path="/customer-list" component={CustomerList} />
+      <Route exact path="/admin-register" component={AdminRegister} />
+      <Route exact path="/apply-loan" component={ApplyLoan} />
     </Router>
      
    

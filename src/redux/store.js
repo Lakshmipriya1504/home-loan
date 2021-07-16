@@ -8,6 +8,10 @@ const initState = {
 };
 //action type
 const CUSTOMER_GET_ALL_ACTION_TYPE = "CUSTOMER_GET_ALL_ACTION_TYPE";
+const CUSTOMER_GET_BY_ID_ACTION_TYPE = "CUSTOMER_GET_BY_ID_ACTION_TYPE";
+const CUSTOMER_CREATE_ACTION_TYPE = "CUSTOMER_CREATE_ACTION_TYPE";
+const CUSTOMER_UPDATE_ACTION_TYPE = "CUSTOMER_UPDATE_ACTION_TYPE";
+const CUSTOMER_DELETE_ACTION_TYPE = "CUSTOMER_DELETE_ACTION_TYPE";
 
 //actions
 export const getAllCustomerAction = () => {
@@ -20,6 +24,23 @@ export const getAllCustomerAction = () => {
   };
 };
 
+export const createCustomerAction = (payload) => {
+  return async (dispatch) => {
+    const url = `http://localhost:8080/customer/addCustomer`;
+    await axios.post(url, payload);
+    console.log(payload);
+    // update the ui. TODO
+  };
+};
+
+export const createApplyLoan = (payload) => {
+  return async (dispatch) => {
+    const url = `http://localhost:8080/addLoan`;
+    await axios.post(url, payload);
+    console.log(payload);
+    // update the ui. TODO
+  };
+};
 export const createUserAction = (payload) => {
   return async (dispatch) => {
     const url = `http://localhost:8085/register`;
