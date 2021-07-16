@@ -15,13 +15,13 @@ export const Navigations = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link className="mr-5 text-dark " as={Link} to="/viewcustomer">
+            <Nav.Link className="mr-5 text-dark " as={Link} to="/viewcustomerpage">
               ViewCustomerPage
             </Nav.Link>
             <Nav.Link className="mr-5  text-dark" as={Link} to="/docsverification">
               DocsVerificationPage
             </Nav.Link>
-            <Nav.Link className="mr-5  text-dark" as={Link} to="/status">
+            <Nav.Link className="mr-5  text-dark" as={Link} to="/statuspage">
               StatusPage
             </Nav.Link>
           </Nav>

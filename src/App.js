@@ -23,6 +23,12 @@ import { DeleteById} from "./admin/delete-customer-by-id"
 import { AppNav } from "./admin/AppNav";
 import { Footer } from "./admin/Footer";
 
+
+ import { financehome} from "./financeverificationofficer/financehome";
+ import { Approval } from "./financeverificationofficer/Approval";
+ import {Status } from "./financeverificationofficer/Status";
+ import { ViewCustomer } from "./financeverificationofficer/ViewCustomer"
+import { AppNavs } from './financeverificationofficer/AppNavs';
 function App() {
   return (
   //<div className="App">
@@ -50,21 +56,29 @@ function App() {
       <Route exact path="/FinanceOfficer-reg" component={FinanceOfficerReg} />
       
       {/* muskan */}
-      <Route exact path="/" component={MyAppHomePage} />
-      <Route exact path="/home" component={MyAppHomePage} />
-      <Route exact path="/viewcustomer" component={ViewCustomerPage} />
+      <Route exact path="/" component={Navigations} />
+      <Route exact path="/home" component={Navigations} />
+      <Route exact path="/viewcustomerpage" component={ViewCustomerPage} />
       <Route exact path="/docsverification" component={DocsVerificationPage} />
-      <Route exact path="/status" component={StatusPage} />
+      <Route exact path="/statuspage" component={StatusPage} />
 
        {/* rohit */}
-      <Router>
-      <Route exact path="/admin" component={admin} />
+  
+      <Route exact path="/admin" component={AppNav} />
       <Route exact path="/viewAll" component={ViewAllCustomer} />
       <Route exact path="/viewbyId" component={ViewCustomerById} />
       <Route exact path="/delete" component={DeleteById} />
+   
+
+
+    
+      <Route exact path="/financehome" component={AppNavs} />
+      <Route exact path="/viewcustomer" component={ViewCustomer} />
+      <Route exact path="/approval" component={Approval} />
+      <Route exact path="/status" component={Status} />
     </Router>
      
-    </Router>
+   
     // </div>
   );
   };

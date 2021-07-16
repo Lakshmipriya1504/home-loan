@@ -8,7 +8,7 @@ export function MyAppHomePage() {
     
     <div>
       <Navigations/>
-      <h2 className="bg-muted text-dark p-3 sticky-top">Home</h2>
+      <h2 className="bg-muted text-dark p-3 sticky-top">LandOfficerHome</h2>
 
       
       <Footers/>

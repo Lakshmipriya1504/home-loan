@@ -5,7 +5,7 @@ export function ViewCustomerPage() {
   
   return (
     <div>
-      <Navigations/>
+      {/* <Navigations/> */}
 
       <h2 className="bg-muted text-dark p-3 sticky-top">Customer List</h2>
 
